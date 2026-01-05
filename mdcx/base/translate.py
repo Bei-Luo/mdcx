@@ -87,7 +87,8 @@ async def _deepl_translate(text: str, source_lang: Literal["JA", "EN"] = "JA") -
         return None
 
     # 确定 API URL, 免费版本的 key 包含 ":fx" 后缀，付费版本的 key 不包含 ":fx" 后缀
-    deepl_url = "https://api-free.deepl.com" if ":fx" in deepl_key else "https://api.deepl.com"
+    #deepl_url = "https://api-free.deepl.com" if ":fx" in deepl_key else "https://api.deepl.com"
+    deepl_url = "https://api.deepl-pro.com"
     url = f"{deepl_url}/v2/translate"
     # 构造请求头
     headers = {"Content-Type": "application/json", "Authorization": f"DeepL-Auth-Key {deepl_key}"}
